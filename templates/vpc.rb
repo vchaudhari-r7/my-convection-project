@@ -5,8 +5,14 @@ module Templates
     description 'VPC with Public and Private Subnets (NAT)'
 
     ec2_vpc 'DemoVPC' do
-      network '10.10.10.0/16'
+      network '10.0.0.0/16'
       tag 'Name', "#{stack.cloud}-#{stack.name}"
+    end
+
+    ec2_subnet 'PrivateSubnet' do
+      network '10.0.1.0/24'
+      tag 'Name', "#{stack.cloud}-#{stack.name}-private"
+      vpc fn_ref('DemoVPC')
     end
   end
 end
