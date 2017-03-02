@@ -14,5 +14,12 @@ module Templates
       tag 'Name', "#{stack.cloud}-#{stack.name}-private"
       vpc fn_ref('DemoVPC')
     end
+
+    ec2_subnet 'PublicSubnet' do
+      network '10.0.2.0/24'
+      tag 'Name', "#{stack.cloud}-#{stack.name}-public"
+      vpc fn_ref('DemoVPC')
+      public_ips true
+    end
   end
 end
