@@ -25,6 +25,14 @@ Following instruction are for Mac OS. ( Tested only in Sierra, but should work o
 	1. brew install awscli
 6. Install Awsaml - is an application for providing automatically rotated temporary AWS credentials.
 	1. https://github.com/rapid7/awsaml <- Follow this guide
+
+## How to run Convection?
+
+1. Create directory structure and files as described in getting started guide of convection
+
+2. Switch to directory ~/my-convection-project/clouds/us-east-1/
+
+3. convection diff 
  
 Sample workflow to create basic VPC
 http://rapid7.viewdocs.io/convection/getting-started/
