@@ -21,5 +21,23 @@ module Templates
       vpc fn_ref('DemoVPC')
       public_ips true
     end
+
+    ec2_security_group 'NATSecurityGroup' do
+      description 'NAT access for private subnet'
+      vpc fn_ref('DemoVPC')
+      tag 'Name', "#{stack.cloud}-#{stack.name}-nat-security-group"
+      ingress_rule :tcp, 443 do
+        source '10.0.1.0/24'
+      end
+      ingress_rule :tcp, 80 do
+        source '10.0.1.0/24'
+      end
+      egress_rule :tcp, 443 do
+        source '0.0.0.0/0'
+      end
+      egress_rule :tcp, 80 do
+        source '0.0.0.0/0'
+      end
+    end
   end
 end
