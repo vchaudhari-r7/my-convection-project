@@ -13,9 +13,9 @@ Convection is DSL for AWS Cloudformation. It's written as ruby gem.
 Following instruction are for Mac OS. ( Tested only in Sierra, but should work on other versions of Mac OS)
 
 1. Install Homebrew - It's a package manager tool for OS X. I use it for installing packages like wget and tree.
-	1. Follow this guide to install homebew → https://brew.sh/
+	1. https://brew.sh/ <- Follow this guide to install homebew
 2. Install latest ruby
-	1. brew install ruby  ← This will install latest ruby.
+	1. brew install ruby  <- This will install latest ruby.
 3. Install bundler - It's a package manager for installing ruby gems ( gems are libraries for ruby )
 	1. gem install bundler
 4. Install 'convection' gem
