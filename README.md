@@ -1,12 +1,17 @@
 # Playing with Convection - A fully generic, modular DSL for AWS CloudFormation
  
 Convection is DSL for AWS Cloudformation. It's written as ruby gem.
+
 < What problem does it exactly solves? >
+
 < How is it different from cloudformation? >
+
 < Why should i invest time to learn instead, instead of dealing with cloudformation directly?>
  
-How to install Convection?
+## How to install Convection?
+
 Following instruction are for Mac OS. ( Tested only in Sierra, but should work on other versions of Mac OS)
+
 1. Install Homebrew - It's a package manager tool for OS X. I use it for installing packages like wget and tree.
 	1. Follow this guide to install homebew → https://brew.sh/
 2. Install latest ruby
@@ -24,6 +29,6 @@ Following instruction are for Mac OS. ( Tested only in Sierra, but should work o
 Sample workflow to create basic VPC
 http://rapid7.viewdocs.io/convection/getting-started/
  
-References:
+## References:
 http://rapid7.viewdocs.io/convection/
 https://github.com/rapid7/convection
