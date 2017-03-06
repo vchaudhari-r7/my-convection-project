@@ -55,5 +55,18 @@ module Templates
       route_table fn_ref('DemoVPCTableInternetGateway')
       subnet fn_ref('PublicSubnet')
     end
+
+    ec2_route_table 'PrivateRouteTable' do
+      vpc fn_ref('DemoVPC')
+      route 'PrivateRoute' do
+        destination '0.0.0.0/0'
+        instance fn_ref('NATInstance')
+      end
+    end
+
+    ec2_subnet_route_table_association 'PrivateRouteAssoc' do
+      route_table fn_ref('PrivateRouteTable')
+      subnet fn_ref('PrivateSubnet')
+    end
   end
 end
