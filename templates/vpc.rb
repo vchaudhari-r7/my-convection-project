@@ -44,7 +44,7 @@ module Templates
 
     ec2_instance 'NATInstance' do
       tag 'Name', "#{stack.cloud}-#{stack.name}-nat"
-      image_id 'ami-d2ee95c5'
+      image_id 'ami-cdf24fa9'
       instance_type 't2.small'
       subnet fn_ref('PublicSubnet')
       security_group fn_ref('NATSecurityGroup')
