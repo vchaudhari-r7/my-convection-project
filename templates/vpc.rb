@@ -7,6 +7,8 @@ module Templates
     ec2_vpc 'DemoVPC' do
       network '10.0.0.0/16'
       tag 'Name', "#{stack.cloud}-#{stack.name}"
+      enable_dns true
+      add_route_table 'InternetGateway', gateway_route: true
     end
 
     ec2_subnet 'PrivateSubnet' do
