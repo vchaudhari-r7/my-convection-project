@@ -50,5 +50,10 @@ module Templates
       security_group fn_ref('NATSecurityGroup')
       src_dst_checks false
     end
+
+    ec2_subnet_route_table_association 'DemoVPCRouteTable' do
+      route_table fn_ref('DemoVPCTableInternetGateway')
+      subnet fn_ref('PublicSubnet')
+    end
   end
 end
