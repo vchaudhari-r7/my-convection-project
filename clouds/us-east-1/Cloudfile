@@ -3,6 +3,6 @@ Dir.glob('./../../templates/**.rb') do |file|
 end
 
 region 'us-east-1'
-name 'convection-demo'
+name 'convection-demo-vivek'
 
 stack 'vpc', Templates::VPC
